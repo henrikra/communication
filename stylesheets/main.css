@@ -1,4 +1,105 @@
-/* line 1, ../sass/main.sass */
-.lol {
-  font-size: 14px;
+@import url("https://fonts.googleapis.com/css?family=Roboto|Pacifico|Libre+Baskerville:400,400italic");
+/* line 1, ../sass/sections/_header-section.sass */
+.header {
+  height: 100vh;
+  background: url("../images/header-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+/* line 9, ../sass/sections/_header-section.sass */
+.header--title {
+  text-align: center;
+  margin: 0;
+  font-size: 70px;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  padding: 20px 0;
+  color: #fff;
+}
+
+/* line 1, ../sass/sections/_first-call.sass */
+.first-call {
+  height: 400px;
+  background: url("../images/call.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/* line 11, ../sass/sections/_first-call.sass */
+.first-call--title {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1;
+}
+/* line 18, ../sass/sections/_first-call.sass */
+.first-call--overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 3, ../sass/base/_typography.sass */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+/* line 1, ../sass/modules/_facts.sass */
+.facts {
+  font-family: "Roboto", sans-serif;
+  margin-top: 40px;
+}
+/* line 5, ../sass/modules/_facts.sass */
+.facts--open-btn {
+  margin-bottom: 20px;
+}
+/* line 8, ../sass/modules/_facts.sass */
+.facts--title {
+  font-size: 20px;
+  margin-top: 0;
+}
+/* line 12, ../sass/modules/_facts.sass */
+.facts--list {
+  margin: 0;
+}
+
+/* line 1, ../sass/modules/_story.sass */
+.story {
+  font-family: "Libre Baskerville", serif;
+}
+/* line 4, ../sass/modules/_story.sass */
+.story p {
+  line-height: 27px;
+}
+/* line 7, ../sass/modules/_story.sass */
+.story + .story {
+  margin-top: 75px;
+}
+
+@media (max-width: 767px) {
+  /* line 14, ../sass/modules/_story.sass */
+  .story + .story {
+    margin-top: 0;
+  }
+}
+/* line 1, ../sass/layout/_section.sass */
+section {
+  padding: 100px 0;
+}
+
+@media (max-width: 767px) {
+  /* line 7, ../sass/layout/_section.sass */
+  section {
+    padding: 15px 0;
+  }
 }

@@ -3,8 +3,81 @@
   <head>
     <title>Communitcation</title>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/main.css">
   </head>
   <body>
-    <h1>Communication</h1>
+    <header class="header">
+      <h1 class="header--title">Palaverit ja viestintä</h1>
+    </header>
+    <section class="problem">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="story">
+              <h2>On kolea Tammikuinen päivä...</h2>
+              <p>... ja Pekka Oy:n idyllisissä tiloissa TJ Pekka Pekkonen silmäilee tarkkaavaisesti yrityksensä tuoreita talouslaskelmia. Nämä synkät luvut ovat vieneet lujana miehenä tunnetun Pekkosen yöunet tullessaan ja mies toteaakin, että uusien tuulien on aika alkaa puhaltaa, jotta yritys selviytyisi alkavasta vuodesta. TJ Pekkonen päättääkin investoida järjestelmään, tarkoituksenaan tehostaa hänen ja työntekijöidensä tehokkuutta.</p>
+              <p>Keskusteltuaan henkilöstön kanssa eri mahdollisuuksista lämpöisen kahvikupposen ääressä Pekka valitsee Ilari Oy:n järjestelmä kehittäjäkseen.</p>
+            </div>
+            <div class="facts"><a role="button" data-toggle="collapse" href="#problem-facts" aria-expanded="false" aria-controls="problem-facts" class="btn btn-default btn-sm facts--open-btn">
+                 
+                Katso faktat <span class="glyphicon glyphicon-screenshot"></span></a>
+              <div id="problem-facts" class="collapse well">
+                <h2 class="facts--title">Yritys A tarvitsee uuden järjestelmän tehostaakseen toimintaansa</h2>
+                <ul class="facts--list">
+                  <li>Otettava selvää alan yrityksistä</li>
+                  <li>Ilmoitettava alaisille tulevista muutoksista ja oltava valmis kuuntelemaan heidän kantansa.</li>
+                  <li>Huomioon tulee ottaa myös seikka, että onko siirtymä edes taloudellisesti kannattava; tuleeko vanha systeemi sittenkin halvemmaksi?  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4"><img src="images/problem.jpg" alt="Problem" class="img-responsive"></div>
+        </div>
+      </div>
+    </section>
+    <section class="first-call">
+      <div class="first-call--overlay"></div>
+      <h2 class="first-call--title">Pekka ottaa yhteyttä Ilari Raijas OY:seen. Toisessa päässä puhelimeen vastaa guru...</h2>
+    </section>
+    <section class="developer">
+      <div class="container">
+        <div class="story">
+          <div class="row">
+            <div class="col-sm-5"><img src="images/ilari.jpg" alt="Ilari" class="img-responsive"></div>
+            <div class="col-sm-7">
+              <h2>Ilari lukeutuu Linus Torvaldsin kaltaisiin...</h2>
+              <p>... tietotekniikan suurmiehiin.  Pitkän ja antoisan keskustelun jälkeen herrat sopivat palaverista, jossa kaksikko joukkoineen tullee erittelemään yhteistyönsä pelisäännöt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="story">
+          <div class="row">
+            <div class="col-sm-7">
+              <h2>Seuraavana päivänä kukonlaulun aikaan...</h2>
+              <p>... Ilari Oy:n konttorissa Ilari kutsuu omat asiantuntijansa neuvottelupöydän ääreen. Aikainen ajankohta ja pieni varoitusaika aiheuttaa työntekijöissä pientä närää, jonka Ilari huomaa. Pitkän pöydän päästä johtaja pahoittelee tilannetta ystävällisesti. Pian osanottajien ärtymys alkaa laantua ja kertoessa Pekka Oy:n hälyttävästä tilanteesta saa Ilari huoneessa täyden huomion ja tuen. Seuraavien työntäyteisten tuntien aikana tulevalle yritysten väliselle palaverille laaditaan ohjelma.</p>
+              <div class="facts"><a role="button" data-toggle="collapse" href="#developer-facts" aria-expanded="false" aria-controls="developer-facts" class="btn btn-default btn-sm facts--open-btn">
+                   
+                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span></a>
+                <div id="developer-facts" class="collapse well">
+                  <h2 class="facts--title">Yritys A tarvitsee uuden järjestelmän tehostaakseen toimintaansa</h2>
+                  <ul class="facts--list">
+                    <li>Työntekijöiden nopeaa reagointia kannattaa kiittää ja painottaa tilauksen tärkeyttä, jotta nopea aikataulu sulatetaan paremmin</li>
+                    <li>Valmistellaan ideat</li>
+                    <li>Kysytään itseltä, mitä palaverilta odotetaan sen päätyttyä ja valmistaudutaan sen mukaisesti</li>
+                    <li>Tutustutaan Pekka OY:een, tunnetaan yritys…</li>
+                    <li>Monimuotoisuuteen valmistautuminen (kulttuurierot)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-5"><img src="images/developer-meeting.jpg" alt="Developer meeting" class="img-responsive"></div>
+          </div>
+        </div>
+      </div>
+      <section class="client-meeting"></section>
+    </section>
   </body>
 </html>
