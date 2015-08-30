@@ -26,11 +26,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center top;
   display: flex;
   align-items: center;
   position: relative;
 }
-/* line 11, ../sass/sections/_first-call.sass */
+/* line 12, ../sass/sections/_first-call.sass */
 .first-call--title {
   color: #fff;
   width: 100%;
@@ -38,20 +39,51 @@
   padding: 20px 0;
   z-index: 1;
 }
-/* line 18, ../sass/sections/_first-call.sass */
-.first-call--overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+
+/* line 1, ../sass/sections/_client-meeting.sass */
+.client-meeting {
+  height: 500px;
+  background: url("../images/client-meeting.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/* line 11, ../sass/sections/_client-meeting.sass */
+.client-meeting--title {
+  color: #fff;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 1, ../sass/sections/_developer-working.sass */
+.developer-working {
+  height: 600px;
+  background: url("../images/working.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+/* line 10, ../sass/sections/_developer-working.sass */
+.developer-working--title {
+  text-align: right;
+  line-height: 50px;
 }
 
 /* line 3, ../sass/base/_typography.sass */
 body {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
+}
+
+/* line 7, ../sass/base/_typography.sass */
+h2 {
+  margin: 20px 0;
 }
 
 /* line 1, ../sass/modules/_facts.sass */
@@ -79,19 +111,37 @@ body {
 }
 /* line 4, ../sass/modules/_story.sass */
 .story p {
-  line-height: 27px;
+  line-height: 29px;
+  margin-bottom: 20px;
 }
-/* line 7, ../sass/modules/_story.sass */
+/* line 8, ../sass/modules/_story.sass */
 .story + .story {
   margin-top: 75px;
 }
+/* line 11, ../sass/modules/_story.sass */
+.story--minor-image {
+  margin-bottom: 30px;
+}
 
 @media (max-width: 767px) {
-  /* line 14, ../sass/modules/_story.sass */
+  /* line 18, ../sass/modules/_story.sass */
   .story + .story {
     margin-top: 0;
   }
 }
+/* line 1, ../sass/modules/_overlays.sass */
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/* line 8, ../sass/modules/_overlays.sass */
+.overlay.overlay-black {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 /* line 1, ../sass/layout/_section.sass */
 section {
   padding: 100px 0;

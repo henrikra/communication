@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title Communitcation
+		title Communication
 		meta(charset="UTF-8")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
@@ -31,7 +31,7 @@ html
 					.col-sm-4
 						img.img-responsive(src="images/problem.jpg" alt="Problem")
 		section.first-call
-			.first-call--overlay
+			.overlay.overlay-black
 			h2.first-call--title Pekka ottaa yhteyttä Ilari Raijas OY:seen. Toisessa päässä puhelimeen vastaa guru...
 
 		section.developer
@@ -43,6 +43,13 @@ html
 						.col-sm-7
 							h2 Ilari lukeutuu Linus Torvaldsin kaltaisiin...
 							p ... tietotekniikan suurmiehiin.  Pitkän ja antoisan keskustelun jälkeen herrat sopivat palaverista, jossa kaksikko joukkoineen tullee erittelemään yhteistyönsä pelisäännöt.
+				
+				.story
+					.row
+						.col-sm-12
+							p Tehokkuudestaan tunnettu Ilari rupeaa jo samana iltana valmistelemaan palaveria  ottaen selvää tuoreen asiakkaansa taustoista ja varaa neuvottelutilan seuraavaksi aamuksi.
+							img.img-responsive(src="images/pekka-research.jpg" alt="Pekka research")
+
 				.story
 					.row
 						.col-sm-7
@@ -65,5 +72,71 @@ html
 							img.img-responsive(src="images/developer-meeting.jpg" alt="Developer meeting")
 
 
+
 				
-			section.client-meeting
+		section.client-meeting
+			.overlay.overlay-black
+			h2.client-meeting--title Hyvinkin pian suuri päivä koittaa ja osapuolet löytävät itsensä kauniiksi katetun neuvottelupöydän ääressä...
+
+		section.meeting-start
+			.container
+				.story
+					.row
+						.col-sm-5
+							img.img-responsive(src="images/woman-mac.jpg" alt="Woman mac")
+						.col-sm-7
+							p Tilassa elää mukavan seurallinen henki ja small-talk raikaa. Lopulta kuitenkin bleisereihin ja pikkutakkeihin pukeutuneet naiset ja herrat istuutuvat pöydän ääreen keskustelemaan Pekka Oy:n tekemästä hankkeesta.
+							p Pitkän palaverin välissä nautitaan Ilari Oy:n konttorin antimista, mutta primäärinä tarkoituksena on tietysti rajata kehitettävän ohjelmiston toiminnallisuus.
+							.facts
+								a.btn.btn-default.btn-sm.facts--open-btn(role="button" data-toggle="collapse" href="#client-meeting-facts" aria-expanded="false" aria-controls="client-meeting-facts") 
+									| Katso faktat 
+									span.glyphicon.glyphicon-screenshot
+								#client-meeting-facts.collapse.well
+									h2.facts--title Hyvän asiakaspalaverin ainekset
+									ul.facts--list
+										li Ajoissa paikalla
+										li Kaikki tuntee agendan
+										li Hyvään ensivaikutelmaan vain 1 mahdollisuus
+										li Kunkin organisaation kannattaa kutsua paikalle vain henkilöt, jotka tarvitsevat kokouksen antia. Siten ylimääräisiltä henkilöiltä ei mene turhaan aikaa. Lisäksi kokous on helpompi pitää kasassa.
+										li Keskustelu molemminpuolista. Saadaan asiat selkeästi esille, ettei tule väärinkäsityksiä
+										li Tekee muistiinpanoja
+
+				.story
+					.row
+						.col-sm-12
+							p Palaverin loppupuolella Ilari Oy:n edustajat ilmoittavat Pekka Oy:n vaatimusten olevan mahdottomia toteuttaa sellaisenaan. Kokousta isännöivä väki keventää tunnelmaa ja lupaa vierailleen, että laatii suunnitelman tuotteesta, jolla Pekka Oy: talous saadaan jaloilleen.
+							.facts
+								a.btn.btn-default.btn-sm.facts--open-btn(role="button" data-toggle="collapse" href="#bad-plan-facts" aria-expanded="false" aria-controls="bad-plan-facts") 
+									| Katso faktat 
+									span.glyphicon.glyphicon-screenshot
+								#bad-plan-facts.collapse.well
+									h2.facts--title Hyvän asiakaspalaverin ainekset
+									ul.facts--list
+										li Esitetään faktat ja kehitysideat
+										li Kompromisseja
+										li Palaverin lopuksi yhteenveto sovituista asioista (lisäneuvottelut?)
+							img.img-responsive(src="images/bad-plan.jpg" alt="Bad plan")
+							
+		section.developer-working
+			.container
+				.row
+					.col-sm-8.col-sm-offset-4
+						h2.developer-working--title Nopeammin kuin toivoa saattaa Ilari Oy pitää asiantuntijapalaverin, jossa työntekijät lyövät viisaat päänsä yhteen selvittääkseen, mitä Pekka OY todellisuudessa tarvitsee.
+
+		section.innovation
+			.container
+				.story
+					.row
+						.col-sm-6
+							.row
+								.col-sm-6
+									img.img-responsive.story--minor-image(src="images/design1.jpg" alt="Design 1")
+								.col-sm-6
+									img.img-responsive.story--minor-image(src="images/design2.jpg" alt="Design 2")
+							.row
+								.col-sm-12
+									img.img-responsive(src="images/design3.jpg" alt="Design 3")
+						.col-sm-6
+							h2 Mikä onkaan se innovaatio, jolla romukoppaan päätynyt toiminnanohjausjärjestelmä korvataan?
+							p Lopulta kun uusi ehdotus on mustaa valkoisella, Ilari Oy ottaa yhteyttä asiakkaaseen.
+							p Osapuolet kohtaavat uudelleen ja Pekka Oy:n edustajille valaistaan kehitetty ehdotus yksityiskohtaisesti ja ollaan valmiita vastaamaan mahdollisiin lisäkysymyksiin. Palaverin jälkeen Pekka Oy:n edustajat palaavat omaan päämajaansa ja yhtiön sisäiset neuvottelut Ilari Oy:n ideasta voivat alkaa.
