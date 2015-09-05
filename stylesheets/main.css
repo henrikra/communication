@@ -75,6 +75,20 @@
   line-height: 50px;
 }
 
+/* line 1, ../sass/sections/_last-call.sass */
+.last-call {
+  height: 500px;
+  background: url("../images/last-call.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+}
+/* line 8, ../sass/sections/_last-call.sass */
+.last-call--title {
+  color: #fff;
+  text-align: center;
+}
+
 /* line 3, ../sass/base/_typography.sass */
 body {
   font-family: "Roboto", sans-serif;
