@@ -75,6 +75,16 @@
   line-height: 50px;
 }
 
+@media (max-width: 1199px) {
+  /* line 16, ../sass/sections/_developer-working.sass */
+  .developer-working {
+    background-position: 80% center;
+  }
+  /* line 19, ../sass/sections/_developer-working.sass */
+  .developer-working--title {
+    text-align: left;
+  }
+}
 /* line 1, ../sass/sections/_last-call.sass */
 .last-call {
   height: 500px;
