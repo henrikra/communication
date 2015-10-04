@@ -24,10 +24,24 @@ html
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
 		link(rel="stylesheet" href="stylesheets/main.css")
-	body
+	body(data-spy="scroll" data-target="#navbar-example")
+		nav.navbar.navbar-default.navbar-fixed-top#navbar-example
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#') Palaverit ja viestintä
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li: a(href='#problem') Tarina
+						li: a(href='#every-meeting') Video 1
+						li: a(href='#expert') Video 2
 		header.header
 			h1.header--title Palaverit ja viestintä
-		section.problem
+		section.problem#problem
 			.container
 				.row
 					.col-sm-8
@@ -123,6 +137,9 @@ html
 							h2 Mikä onkaan se innovaatio, jolla romukoppaan päätynyt ERP korvataan?
 							p Lopulta kun uusi ehdotus on mustaa valkoisella, Ilari Oy ottaa yhteyttä asiakkaaseen.
 							p Osapuolet kohtaavat uudelleen ja Pekka Oy:n edustajille valaistaan kehitetty ehdotus yksityiskohtaisesti ja ollaan valmiita vastaamaan mahdollisiin lisäkysymyksiin. Palaverin jälkeen Pekka Oy:n edustajat palaavat omaan päämajaansa ja yhtiön sisäiset neuvottelut Ilari Oy:n ideasta voivat alkaa.
+							+factModal('Palaverin viimeistely', '4',
+							'Saa kaikki tajuamaan lopputulos',
+							'Tee suunnitelmista totta')
 				.story
 					.row
 						.col-sm-12
@@ -143,3 +160,24 @@ html
 							h2 Kolmas kerta toden sanoo
 							p Tuoreimmassa palaverissa osapuolet vihdoin pääsevät yhteisymmärrykseen hankkeen sisällöstä ja kehitystyö saa lähtölaukauksen.
 							img.img-responsive(src="images/handshake.jpg" alt="Handshake")
+
+		section.every-meeting#every-meeting
+			.container
+				.row
+					.col-sm-12
+						h1.every-meeting--title Every Meeting Ever
+				.row
+					.col-sm-12
+						.embed-responsive.embed-responsive-16by9
+							iframe(src="http://www.youtube.com/embed/K7agjXFFQJU?hd=1&iv_load_policy=3" allowfullscreen)
+
+
+		section.expert#expert
+			.container
+				.row
+					.col-sm-12
+						h1.every-meeting--title The Expert
+				.row
+					.col-sm-12
+						.embed-responsive.embed-responsive-16by9
+							iframe(src="http://www.youtube.com/embed/BKorP55Aqvg?hd=1&iv_load_policy=3" allowfullscreen)

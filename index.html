@@ -8,11 +8,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="stylesheets/main.css">
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar-example">
+    <nav id="navbar-example" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Palaverit ja viestintä</a>
+        </div>
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#problem">Tarina</a></li>
+            <li><a href="#every-meeting">Video 1</a></li>
+            <li><a href="#expert">Video 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <header class="header">
       <h1 class="header--title">Palaverit ja viestintä</h1>
     </header>
-    <section class="problem">
+    <section id="problem" class="problem">
       <div class="container">
         <div class="row">
           <div class="col-sm-8">
@@ -184,6 +198,30 @@
               <h2>Mikä onkaan se innovaatio, jolla romukoppaan päätynyt ERP korvataan?</h2>
               <p>Lopulta kun uusi ehdotus on mustaa valkoisella, Ilari Oy ottaa yhteyttä asiakkaaseen.</p>
               <p>Osapuolet kohtaavat uudelleen ja Pekka Oy:n edustajille valaistaan kehitetty ehdotus yksityiskohtaisesti ja ollaan valmiita vastaamaan mahdollisiin lisäkysymyksiin. Palaverin jälkeen Pekka Oy:n edustajat palaavat omaan päämajaansa ja yhtiön sisäiset neuvottelut Ilari Oy:n ideasta voivat alkaa.</p>
+              <div class="facts">
+                <button data-toggle="modal" data-target="#fact-modal-4" class="btn btn-default btn-sm">
+                   
+                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span>
+                </button>
+                <div id="fact-modal-4" tabindex="-1" role="dialog" aria-labelledby="fact-modal-4-label" class="modal fade">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 id="fact-modal-4-label" class="modal-title">Palaverin viimeistely</h4>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li>Saa kaikki tajuamaan lopputulos</li>
+                          <li>Tee suunnitelmista totta</li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Sulje</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -212,6 +250,38 @@
             <div class="col-sm-12">
               <h2>Kolmas kerta toden sanoo</h2>
               <p>Tuoreimmassa palaverissa osapuolet vihdoin pääsevät yhteisymmärrykseen hankkeen sisällöstä ja kehitystyö saa lähtölaukauksen.</p><img src="images/handshake.jpg" alt="Handshake" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="every-meeting" class="every-meeting">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="every-meeting--title">Every Meeting Ever</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe src="http://www.youtube.com/embed/K7agjXFFQJU?hd=1&amp;iv_load_policy=3" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="expert" class="expert">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="every-meeting--title">The Expert</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe src="http://www.youtube.com/embed/BKorP55Aqvg?hd=1&amp;iv_load_policy=3" allowfullscreen></iframe>
             </div>
           </div>
         </div>
