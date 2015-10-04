@@ -3,7 +3,7 @@
   <head>
     <title>Communication</title>
     <meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="stylesheets/main.css">
@@ -20,18 +20,6 @@
               <h2>On kolea Tammikuinen päivä...</h2>
               <p>... ja Pekka Oy:n idyllisissä tiloissa TJ Pekka Pekkonen silmäilee tarkkaavaisesti yrityksensä tuoreita talouslaskelmia. Nämä synkät luvut ovat vieneet lujana miehenä tunnetun Pekkosen yöunet tullessaan ja mies toteaakin, että uusien tuulien on aika alkaa puhaltaa, jotta yritys selviytyisi alkavasta vuodesta. TJ Pekkonen päättääkin investoida järjestelmään, tarkoituksenaan tehostaa hänen ja työntekijöidensä tehokkuutta.</p>
               <p>Keskusteltuaan henkilöstön kanssa eri mahdollisuuksista lämpöisen kahvikupposen ääressä Pekka valitsee Ilari Oy:n järjestelmä kehittäjäkseen.</p>
-            </div>
-            <div class="facts"><a role="button" data-toggle="collapse" href="#problem-facts" aria-expanded="false" aria-controls="problem-facts" class="btn btn-default btn-sm facts--open-btn">
-                 
-                Katso faktat <span class="glyphicon glyphicon-screenshot"></span></a>
-              <div id="problem-facts" class="collapse well">
-                <h2 class="facts--title">Yritys A tarvitsee uuden järjestelmän tehostaakseen toimintaansa</h2>
-                <ul class="facts--list">
-                  <li>Otettava selvää alan yrityksistä</li>
-                  <li>Ilmoitettava alaisille tulevista muutoksista ja oltava valmis kuuntelemaan heidän kantansa.</li>
-                  <li>Huomioon tulee ottaa myös seikka, että onko siirtymä edes taloudellisesti kannattava; tuleeko vanha systeemi sittenkin halvemmaksi?  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="col-sm-4"><img src="images/problem.jpg" alt="Problem" class="img-responsive"></div>
@@ -56,7 +44,32 @@
         <div class="story">
           <div class="row">
             <div class="col-sm-12">
-              <p>Tehokkuudestaan tunnettu Ilari rupeaa jo samana iltana valmistelemaan palaveria  ottaen selvää tuoreen asiakkaansa taustoista ja varaa neuvottelutilan seuraavaksi aamuksi.</p><img src="images/pekka-research.jpg" alt="Pekka research" class="img-responsive">
+              <p>Tehokkuudestaan tunnettu Ilari rupeaa jo samana iltana valmistelemaan palaveria  ottaen selvää tuoreen asiakkaansa taustoista ja varaa neuvottelutilan seuraavaksi aamuksi.</p>
+              <div class="facts">
+                <button data-toggle="modal" data-target="#fact-modal-1" class="btn btn-default btn-sm">
+                   
+                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span>
+                </button>
+                <div id="fact-modal-1" tabindex="-1" role="dialog" aria-labelledby="fact-modal-1-label" class="modal fade">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 id="fact-modal-1-label" class="modal-title">Maksimoi palaverin laatu suunnittelemalla</h4>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li>Saa hiottuja ideoita kollegoiltasi</li>
+                          <li>Optimoi palaverin tuottavuus keston määrittämisellä</li>
+                          <li>Säästä työtunteja kutsumalla oikeat henkilöt</li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Sulje</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><img src="images/pekka-research.jpg" alt="Pekka research" class="img-responsive">
             </div>
           </div>
         </div>
@@ -65,20 +78,6 @@
             <div class="col-sm-7">
               <h2>Seuraavana päivänä kukonlaulun aikaan...</h2>
               <p>... Ilari Oy:n konttorissa Ilari kutsuu omat asiantuntijansa neuvottelupöydän ääreen. Aikainen ajankohta ja pieni varoitusaika aiheuttaa työntekijöissä pientä närää, jonka Ilari huomaa. Pitkän pöydän päästä johtaja pahoittelee tilannetta ystävällisesti. Pian osanottajien ärtymys alkaa laantua ja kertoessa Pekka Oy:n hälyttävästä tilanteesta saa Ilari huoneessa täyden huomion ja tuen. Seuraavien työntäyteisten tuntien aikana tulevalle yritysten väliselle palaverille laaditaan ohjelma.</p>
-              <div class="facts"><a role="button" data-toggle="collapse" href="#developer-facts" aria-expanded="false" aria-controls="developer-facts" class="btn btn-default btn-sm facts--open-btn">
-                   
-                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span></a>
-                <div id="developer-facts" class="collapse well">
-                  <h2 class="facts--title">Yritys A tarvitsee uuden järjestelmän tehostaakseen toimintaansa</h2>
-                  <ul class="facts--list">
-                    <li>Työntekijöiden nopeaa reagointia kannattaa kiittää ja painottaa tilauksen tärkeyttä, jotta nopea aikataulu sulatetaan paremmin</li>
-                    <li>Valmistellaan ideat</li>
-                    <li>Kysytään itseltä, mitä palaverilta odotetaan sen päätyttyä ja valmistaudutaan sen mukaisesti</li>
-                    <li>Tutustutaan Pekka OY:een, tunnetaan yritys…</li>
-                    <li>Monimuotoisuuteen valmistautuminen (kulttuurierot)</li>
-                  </ul>
-                </div>
-              </div>
             </div>
             <div class="col-sm-5"><img src="images/developer-meeting.jpg" alt="Developer meeting" class="img-responsive"></div>
           </div>
@@ -86,8 +85,8 @@
       </div>
     </section>
     <section class="client-meeting">
-      <div class="overlay overlay-black"></div>
       <h2 class="client-meeting--title">Hyvinkin pian suuri päivä koittaa ja osapuolet löytävät itsensä kauniiksi katetun neuvottelupöydän ääressä...</h2>
+      <div class="overlay overlay-black"></div>
     </section>
     <section class="meeting-start">
       <div class="container">
@@ -95,42 +94,65 @@
           <div class="row">
             <div class="col-sm-5"><img src="images/woman-mac.jpg" alt="Woman mac" class="img-responsive"></div>
             <div class="col-sm-7">
-              <p>Tilassa elää mukavan seurallinen henki ja small-talk raikaa. Lopulta kuitenkin bleisereihin ja pikkutakkeihin pukeutuneet naiset ja herrat istuutuvat pöydän ääreen keskustelemaan Pekka Oy:n tekemästä hankkeesta.</p>
-              <p>Pitkän palaverin välissä nautitaan Ilari Oy:n konttorin antimista, mutta primäärinä tarkoituksena on tietysti rajata kehitettävän ohjelmiston toiminnallisuus.</p>
-              <div class="facts"><a role="button" data-toggle="collapse" href="#client-meeting-facts" aria-expanded="false" aria-controls="client-meeting-facts" class="btn btn-default btn-sm facts--open-btn">
+              <div class="facts">
+                <button data-toggle="modal" data-target="#fact-modal-2" class="btn btn-default btn-sm">
                    
-                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span></a>
-                <div id="client-meeting-facts" class="collapse well">
-                  <h2 class="facts--title">Hyvän asiakaspalaverin ainekset</h2>
-                  <ul class="facts--list">
-                    <li>Ajoissa paikalla</li>
-                    <li>Kaikki tuntee agendan</li>
-                    <li>Hyvään ensivaikutelmaan vain 1 mahdollisuus</li>
-                    <li>Kunkin organisaation kannattaa kutsua paikalle vain henkilöt, jotka tarvitsevat kokouksen antia. Siten ylimääräisiltä henkilöiltä ei mene turhaan aikaa. Lisäksi kokous on helpompi pitää kasassa.</li>
-                    <li>Keskustelu molemminpuolista. Saadaan asiat selkeästi esille, ettei tule väärinkäsityksiä</li>
-                    <li>Tekee muistiinpanoja</li>
-                  </ul>
+                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span>
+                </button>
+                <div id="fact-modal-2" tabindex="-1" role="dialog" aria-labelledby="fact-modal-2-label" class="modal fade">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 id="fact-modal-2-label" class="modal-title">Onnistu asiakaspalaverissa</h4>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li>Ansaitse vastapuolen luottamus</li>
+                          <li>Anna asiantunteva kuva itsestäsi</li>
+                          <li>Muista tärkeimmät asiat palaverin jälkeen</li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Sulje</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <p>Tilassa elää mukavan seurallinen henki ja small-talk raikaa. Lopulta kuitenkin bleisereihin ja pikkutakkeihin pukeutuneet naiset ja herrat istuutuvat pöydän ääreen keskustelemaan Pekka Oy:n tekemästä hankkeesta.</p>
+              <p>Pitkän palaverin välissä nautitaan Ilari Oy:n konttorin antimista, mutta primäärinä tarkoituksena on tietysti rajata kehitettävän ohjelmiston toiminnallisuus.</p>
             </div>
           </div>
         </div>
         <div class="story">
           <div class="row">
             <div class="col-sm-12">
-              <p>Palaverin loppupuolella Ilari Oy:n edustajat ilmoittavat Pekka Oy:n vaatimusten olevan mahdottomia toteuttaa sellaisenaan. Kokousta isännöivä väki keventää tunnelmaa ja lupaa vierailleen, että laatii suunnitelman tuotteesta, jolla Pekka Oy: talous saadaan jaloilleen.</p>
-              <div class="facts"><a role="button" data-toggle="collapse" href="#bad-plan-facts" aria-expanded="false" aria-controls="bad-plan-facts" class="btn btn-default btn-sm facts--open-btn">
+              <div class="facts">
+                <button data-toggle="modal" data-target="#fact-modal-3" class="btn btn-default btn-sm">
                    
-                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span></a>
-                <div id="bad-plan-facts" class="collapse well">
-                  <h2 class="facts--title">Hyvän asiakaspalaverin ainekset</h2>
-                  <ul class="facts--list">
-                    <li>Esitetään faktat ja kehitysideat</li>
-                    <li>Kompromisseja</li>
-                    <li>Palaverin lopuksi yhteenveto sovituista asioista (lisäneuvottelut?)</li>
-                  </ul>
+                  Katso faktat <span class="glyphicon glyphicon-screenshot"></span>
+                </button>
+                <div id="fact-modal-3" tabindex="-1" role="dialog" aria-labelledby="fact-modal-3-label" class="modal fade">
+                  <div role="document" class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 id="fact-modal-3-label" class="modal-title">Tuloksellinen kommunikaatio</h4>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li>Saa kaikkia miellyttävä tulos hyvällä asenteella</li>
+                          <li>Anna kaikkien puhua, jotta saat parhaimmat ideat</li>
+                          <li>Tee itsestäsi vakuuttava eri äänenpainoilla</li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Sulje</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div><img src="images/bad-plan.jpg" alt="Bad plan" class="img-responsive">
+              </div>
+              <p>Palaverin loppupuolella Ilari Oy:n edustajat ilmoittavat Pekka Oy:n vaatimusten olevan mahdottomia toteuttaa sellaisenaan. Kokousta isännöivä väki keventää tunnelmaa ja lupaa vierailleen, että laatii suunnitelman tuotteesta, jolla Pekka Oy: talous saadaan jaloilleen.</p><img src="images/bad-plan.jpg" alt="Bad plan" class="img-responsive">
             </div>
           </div>
         </div>
@@ -179,7 +201,9 @@
       </div>
     </section>
     <section class="last-call">
-      <h2 class="last-call--title">Puhelinlangat laulaa ja uuden palaverin paikka ja aika sovitaan</h2>
+      <div class="container">
+        <h2 class="last-call--title">Puhelinlangat laulaa ja uuden palaverin paikka ja aika sovitaan</h2>
+      </div>
     </section>
     <section class="contract">
       <div class="container">

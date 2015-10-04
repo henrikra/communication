@@ -15,8 +15,8 @@
   font-size: 70px;
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
-  padding: 20px 0;
   color: #fff;
+  padding: 20px 15px;
 }
 
 /* line 1, ../sass/sections/_first-call.sass */
@@ -38,6 +38,7 @@
   text-align: center;
   padding: 20px 0;
   z-index: 1;
+  padding: 0 15px;
 }
 
 /* line 1, ../sass/sections/_client-meeting.sass */
@@ -57,6 +58,7 @@
   z-index: 1;
   width: 100%;
   text-align: center;
+  padding: 0 15px;
 }
 
 /* line 1, ../sass/sections/_developer-working.sass */
@@ -112,21 +114,9 @@ h2 {
 
 /* line 1, ../sass/modules/_facts.sass */
 .facts {
+  margin-bottom: 40px;
   font-family: "Roboto", sans-serif;
-  margin-top: 40px;
-}
-/* line 5, ../sass/modules/_facts.sass */
-.facts--open-btn {
-  margin-bottom: 20px;
-}
-/* line 8, ../sass/modules/_facts.sass */
-.facts--title {
-  font-size: 20px;
-  margin-top: 0;
-}
-/* line 12, ../sass/modules/_facts.sass */
-.facts--list {
-  margin: 0;
+  font-size: 18px;
 }
 
 /* line 1, ../sass/modules/_story.sass */
@@ -152,6 +142,10 @@ h2 {
   .story + .story {
     margin-top: 0;
   }
+  /* line 21, ../sass/modules/_story.sass */
+  .story--minor-image {
+    display: none;
+  }
 }
 /* line 1, ../sass/modules/_overlays.sass */
 .overlay {
@@ -164,6 +158,26 @@ h2 {
 /* line 8, ../sass/modules/_overlays.sass */
 .overlay.overlay-black {
   background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 1, ../sass/modules/_modal.sass */
+.modal-content {
+  border-radius: 0;
+}
+
+/* line 4, ../sass/modules/_modal.sass */
+.modal-header {
+  border-left: 6px solid #3498db;
+}
+
+/* line 7, ../sass/modules/_modal.sass */
+.modal-title {
+  font-size: 25px;
+}
+
+/* line 10, ../sass/modules/_modal.sass */
+.modal-body {
+  padding: 30px 15px;
 }
 
 /* line 1, ../sass/layout/_section.sass */

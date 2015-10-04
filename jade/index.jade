@@ -1,9 +1,26 @@
+mixin factModal(title, id, ...bullets)
+	.facts
+		button.btn.btn-default.btn-sm(data-toggle="modal" data-target="#fact-modal-#{id}") 
+			| Katso faktat 
+			span.glyphicon.glyphicon-screenshot
+		.modal.fade(id="fact-modal-#{id}" tabindex="-1" role="dialog" aria-labelledby="fact-modal-#{id}-label")
+			.modal-dialog(role="document")
+				.modal-content
+					.modal-header
+						h4.modal-title(id="fact-modal-#{id}-label")= title
+					.modal-body
+						ul
+							each bullet in bullets
+								li= bullet 
+					.modal-footer
+						button.btn.btn-default(type="button" data-dismiss="modal") Sulje
+
 doctype html
 html
 	head
 		title Communication
 		meta(charset="UTF-8")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
 		link(rel="stylesheet" href="stylesheets/main.css")
@@ -18,16 +35,6 @@ html
 							h2 On kolea Tammikuinen päivä...
 							p ... ja Pekka Oy:n idyllisissä tiloissa TJ Pekka Pekkonen silmäilee tarkkaavaisesti yrityksensä tuoreita talouslaskelmia. Nämä synkät luvut ovat vieneet lujana miehenä tunnetun Pekkosen yöunet tullessaan ja mies toteaakin, että uusien tuulien on aika alkaa puhaltaa, jotta yritys selviytyisi alkavasta vuodesta. TJ Pekkonen päättääkin investoida järjestelmään, tarkoituksenaan tehostaa hänen ja työntekijöidensä tehokkuutta.
 							p Keskusteltuaan henkilöstön kanssa eri mahdollisuuksista lämpöisen kahvikupposen ääressä Pekka valitsee Ilari Oy:n järjestelmä kehittäjäkseen.
-						.facts
-							a.btn.btn-default.btn-sm.facts--open-btn(role="button" data-toggle="collapse" href="#problem-facts" aria-expanded="false" aria-controls="problem-facts") 
-								| Katso faktat 
-								span.glyphicon.glyphicon-screenshot
-							#problem-facts.collapse.well
-								h2.facts--title Yritys A tarvitsee uuden järjestelmän tehostaakseen toimintaansa
-								ul.facts--list
-									li Otettava selvää alan yrityksistä
-									li Ilmoitettava alaisille tulevista muutoksista ja oltava valmis kuuntelemaan heidän kantansa.
-									li Huomioon tulee ottaa myös seikka, että onko siirtymä edes taloudellisesti kannattava; tuleeko vanha systeemi sittenkin halvemmaksi?  
 					.col-sm-4
 						img.img-responsive(src="images/problem.jpg" alt="Problem")
 		section.first-call
@@ -48,6 +55,10 @@ html
 					.row
 						.col-sm-12
 							p Tehokkuudestaan tunnettu Ilari rupeaa jo samana iltana valmistelemaan palaveria  ottaen selvää tuoreen asiakkaansa taustoista ja varaa neuvottelutilan seuraavaksi aamuksi.
+							+factModal('Maksimoi palaverin laatu suunnittelemalla', '1',
+							'Saa hiottuja ideoita kollegoiltasi',
+							'Optimoi palaverin tuottavuus keston määrittämisellä',
+							'Säästä työtunteja kutsumalla oikeat henkilöt')
 							img.img-responsive(src="images/pekka-research.jpg" alt="Pekka research")
 
 				.story
@@ -55,28 +66,14 @@ html
 						.col-sm-7
 							h2 Seuraavana päivänä kukonlaulun aikaan...
 							p ... Ilari Oy:n konttorissa Ilari kutsuu omat asiantuntijansa neuvottelupöydän ääreen. Aikainen ajankohta ja pieni varoitusaika aiheuttaa työntekijöissä pientä närää, jonka Ilari huomaa. Pitkän pöydän päästä johtaja pahoittelee tilannetta ystävällisesti. Pian osanottajien ärtymys alkaa laantua ja kertoessa Pekka Oy:n hälyttävästä tilanteesta saa Ilari huoneessa täyden huomion ja tuen. Seuraavien työntäyteisten tuntien aikana tulevalle yritysten väliselle palaverille laaditaan ohjelma.
-							.facts
-								a.btn.btn-default.btn-sm.facts--open-btn(role="button" data-toggle="collapse" href="#developer-facts" aria-expanded="false" aria-controls="developer-facts") 
-									| Katso faktat 
-									span.glyphicon.glyphicon-screenshot
-								#developer-facts.collapse.well
-									h2.facts--title Yritys A tarvitsee uuden järjestelmän tehostaakseen toimintaansa
-									ul.facts--list
-										li Työntekijöiden nopeaa reagointia kannattaa kiittää ja painottaa tilauksen tärkeyttä, jotta nopea aikataulu sulatetaan paremmin
-										li Valmistellaan ideat
-										li Kysytään itseltä, mitä palaverilta odotetaan sen päätyttyä ja valmistaudutaan sen mukaisesti
-										li Tutustutaan Pekka OY:een, tunnetaan yritys…
-										li Monimuotoisuuteen valmistautuminen (kulttuurierot)
 
 						.col-sm-5
 							img.img-responsive(src="images/developer-meeting.jpg" alt="Developer meeting")
 
-
-
-				
 		section.client-meeting
-			.overlay.overlay-black
 			h2.client-meeting--title Hyvinkin pian suuri päivä koittaa ja osapuolet löytävät itsensä kauniiksi katetun neuvottelupöydän ääressä...
+			.overlay.overlay-black
+				
 
 		section.meeting-start
 			.container
@@ -85,36 +82,22 @@ html
 						.col-sm-5
 							img.img-responsive(src="images/woman-mac.jpg" alt="Woman mac")
 						.col-sm-7
+							+factModal('Onnistu asiakaspalaverissa', '2',
+							'Ansaitse vastapuolen luottamus',
+							'Anna asiantunteva kuva itsestäsi',
+							'Muista tärkeimmät asiat palaverin jälkeen')
 							p Tilassa elää mukavan seurallinen henki ja small-talk raikaa. Lopulta kuitenkin bleisereihin ja pikkutakkeihin pukeutuneet naiset ja herrat istuutuvat pöydän ääreen keskustelemaan Pekka Oy:n tekemästä hankkeesta.
 							p Pitkän palaverin välissä nautitaan Ilari Oy:n konttorin antimista, mutta primäärinä tarkoituksena on tietysti rajata kehitettävän ohjelmiston toiminnallisuus.
-							.facts
-								a.btn.btn-default.btn-sm.facts--open-btn(role="button" data-toggle="collapse" href="#client-meeting-facts" aria-expanded="false" aria-controls="client-meeting-facts") 
-									| Katso faktat 
-									span.glyphicon.glyphicon-screenshot
-								#client-meeting-facts.collapse.well
-									h2.facts--title Hyvän asiakaspalaverin ainekset
-									ul.facts--list
-										li Ajoissa paikalla
-										li Kaikki tuntee agendan
-										li Hyvään ensivaikutelmaan vain 1 mahdollisuus
-										li Kunkin organisaation kannattaa kutsua paikalle vain henkilöt, jotka tarvitsevat kokouksen antia. Siten ylimääräisiltä henkilöiltä ei mene turhaan aikaa. Lisäksi kokous on helpompi pitää kasassa.
-										li Keskustelu molemminpuolista. Saadaan asiat selkeästi esille, ettei tule väärinkäsityksiä
-										li Tekee muistiinpanoja
-
+				
 				.story
 					.row
 						.col-sm-12
+							+factModal('Tuloksellinen kommunikaatio', '3',
+							'Saa kaikkia miellyttävä tulos hyvällä asenteella',
+							'Anna kaikkien puhua, jotta saat parhaimmat ideat',
+							'Tee itsestäsi vakuuttava eri äänenpainoilla')
 							p Palaverin loppupuolella Ilari Oy:n edustajat ilmoittavat Pekka Oy:n vaatimusten olevan mahdottomia toteuttaa sellaisenaan. Kokousta isännöivä väki keventää tunnelmaa ja lupaa vierailleen, että laatii suunnitelman tuotteesta, jolla Pekka Oy: talous saadaan jaloilleen.
-							.facts
-								a.btn.btn-default.btn-sm.facts--open-btn(role="button" data-toggle="collapse" href="#bad-plan-facts" aria-expanded="false" aria-controls="bad-plan-facts") 
-									| Katso faktat 
-									span.glyphicon.glyphicon-screenshot
-								#bad-plan-facts.collapse.well
-									h2.facts--title Hyvän asiakaspalaverin ainekset
-									ul.facts--list
-										li Esitetään faktat ja kehitysideat
-										li Kompromisseja
-										li Palaverin lopuksi yhteenveto sovituista asioista (lisäneuvottelut?)
+							
 							img.img-responsive(src="images/bad-plan.jpg" alt="Bad plan")
 							
 		section.developer-working
@@ -149,7 +132,8 @@ html
 							h2 Pekka Oy:n työntekijät neuvottelevat Ilari Oy:n tarjouksesta...
 							p ... mutta samaan aikaan puntaroivat myös muita, kilpailevien yritysten palveluja. Kylmän matematiikan ja helmitaulun opastamana päätös valmistuu pienin mutta varmin askelein. Pekka Oy päättää näyttää vihreätä valoa Ilari Oy:n ehdotukselle.
 		section.last-call
-			h2.last-call--title Puhelinlangat laulaa ja uuden palaverin paikka ja aika sovitaan
+			.container
+				h2.last-call--title Puhelinlangat laulaa ja uuden palaverin paikka ja aika sovitaan
 
 		section.contract
 			.container
